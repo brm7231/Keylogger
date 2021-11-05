@@ -8,7 +8,8 @@
 I created this keylogger from scratch because I was bored. Please do not misuse this software: it is only for educational purposes!
 
 ## Directions
-- All necessary 3rd Party modules are included so you can edit the `logger.pyw` and compile
+- There are a few 3rd Party modules that you will need to install to the path for your project
+- Once you have installed the necessary modules, you will be able to compile the `logger.pyw`
 - For compilation, you will need to run the following commands in cmd
 ~~~
 pip install pyinstaller
