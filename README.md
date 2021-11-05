@@ -1,4 +1,9 @@
 # Keylogger
+## WARNING!!
+*The .exe file is live, and will record any keystrokes pressed when the .exe file has been run, until the process is terminated. It is only included for ease of transfer to my virtual machines. *
+
+*AGAIN, THIS .exe FILE IS A VIRUS, AND WILL ALLOW ME TO VIEW YOUR KEYSTROKES, SO PLEASE DO NOT DOWNLOAD IT!*
+
 ## **DISCLAIMER - LEGAL**
 *This is not to be used for illegal purposes*
 
