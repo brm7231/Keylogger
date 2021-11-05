@@ -10,7 +10,7 @@ I created this keylogger from scratch because I was bored. Please do not misuse 
 ## Directions
 - There are a few 3rd Party modules that you will need to install to the path for your project
 - Once you have installed the necessary modules, you will be able to compile the `logger.pyw`
-- For compilation, you will need to run the following commands in cmd
+- For compilation, you will need to run the following commands in cmd (see https://www.devdungeon.com/content/pyinstaller-tutorial for more details)
 ~~~
 pip install pyinstaller
 cd (path_of_folder_where_logger.pyw_located)
